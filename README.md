@@ -1,5 +1,5 @@
-# movieTicektMachin
-サイト↓
+# movieTicektMachine
+サイト↓ 
 https://s19013movie.herokuapp.com/
 読み込みに時間がかかりますがしばらくお待ち下さい
 
