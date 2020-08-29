@@ -12,7 +12,8 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 springBoot{
-	mainClassName = "com.example.movie.CreateDBKt"
+//	mainClassName = "com.example.movie.CreateDBKt"
+	mainClassName = "com.example.movie.MovieApplicationKt"
 }
 
 repositories {
