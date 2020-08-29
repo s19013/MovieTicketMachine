@@ -8,7 +8,6 @@
 </head>
 <body>
 <h1>QRコード</h1>
-<p th:text="${TL}"></p>
 <img th:src="@{https://api.qrserver.com/v1/create-qr-code/?data={qr}&size=100x100(qr=${qr})}" alt="">
 </body>
 </html>

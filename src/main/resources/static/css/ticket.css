@@ -1,4 +1,32 @@
-img{
-  width: 50%;
+h1{
+  /* grid-column:2/3;
+  grid-row:1/2; */
+}
+
+@media(min-width: 600px){
+  body{
+    text-align: center;
+    /* display: grid; */
+    /* grid-template-columns:2fr 4fr 2fr;
+    grid-template-rows:1fr 4fr 2fr; */
+  }
+
+  img{
+  width: 30%;
   height: auto;
+}
+}
+
+/* grid ~599px */
+@media(max-width: 599px){
+    body{
+      text-align: center;
+        /* display: grid;
+        grid-template-columns:1fr 5fr 1fr;
+        grid-template-rows:1fr 4fr; */
+      }
+    img{
+        width: 60%;
+        height: auto;
+    }
 }
