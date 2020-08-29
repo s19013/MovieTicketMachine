@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>movie</title>
+    <link rel="stylesheet" th:href="@{/css/seat.css}">
+</head>
+<body>
+<!-- <div class="table"> -->
+<table border="1">
+    <tr>
+        <th> </th>
+        <th class="title" th:each = "i : ${#numbers.sequence(1, 9)}" th:text="${i}"></th>
+        <th class="niketa">10</th>
+    </tr>
+    <tr>
+        <th class="title">a</th>
+        <th th:each = "sl:${ASeatList}" >
+          <div class="active" th:if = "${sl.varcant}" >
+            <a th:href="@{{time}/{R}/{C} (time=${sl.time},R=${sl.row},C=${sl.column})}">
+                  <p>o</p>
+            </a>
+          </div>
+            <div th:unless = "${sl.varcant}" class="notActive">
+              <p>x</p>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th class="title">b</th>
+        <th th:each = "sl:${BSeatList}">
+          <div class="active" th:if="${sl.varcant}">
+            <a th:if = "${sl.varcant}" th:href="@{{time}/{R}/{C} (time=${sl.time},R=${sl.row},C=${sl.column})}">
+              <p>o</p>
+            </a>
+        </div>
+            <div th:unless="${sl.varcant}" class="notActive">
+              <p>x</p>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th class="title">c</th>
+        <th th:each = "sl:${CSeatList}">
+          <div class="active" th:if="${sl.varcant}">
+            <a th:if = "${sl.varcant}" th:href="@{{time}/{R}/{C} (time=${sl.time},R=${sl.row},C=${sl.column})}">
+              <p>o</p>
+            </a>
+        </div>
+            <div th:unless="${sl.varcant}" class="notActive">
+              <p>x</p>
+            </div>
+        </th>
+    </tr>
+</table>
+<!-- </div> -->
+</body>
+</html>
+<!--    <tr>-->
+<!--        <th th:each = "sl:${seatList}" th:text = "${sl.seatNumber}"></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td th:each = "sl:${seatList}" th:text="${sl.varcant}"><button></button></td>-->
+<!--    </tr>-->

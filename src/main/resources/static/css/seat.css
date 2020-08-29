@@ -1,0 +1,62 @@
+/* html{
+  font-size: 62.5%;
+} */
+.title{
+  font-size: 1.2em;
+}
+.niketa{
+  font-size: 1.2em;
+}
+.notActive{
+  padding: auto;
+}
+.notActive p{
+  font-size:1.2em ;
+  width: 70%;
+  margin:0.5em auto;
+  padding: 0.05em 0.25em;
+  border:2px;
+  color:#ffffff;
+  background-color: darkblue;
+}
+
+.active{
+  padding: auto;
+}
+.active p{
+  font-size:1.2em ;
+  width: 70%;
+  margin:0.5em auto;
+  padding: 0.05em 0.25em;
+  border:2px;
+  color:#ffffff;
+  background-color:#ff1e23;
+}
+
+table{
+  width: 100%;
+}
+
+
+
+
+@media(min-width: 800px){
+  table{
+  grid-column: 2/3;
+  }
+
+  body{
+    display: grid;
+    grid-template-columns:1fr 5fr 1fr;
+  }
+}
+
+/* grid ~599px */
+@media(max-width: 799px){
+
+  table{
+  table-layout: fixed;
+  word-break: break-word;
+  }
+
+}

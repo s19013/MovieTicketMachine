@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:./moviedb
+    username: root
+    password:
+  mvc:
+    favicon:
+      enabled=: false
+    hiddenmethod:
+      filter:
+        enabled=true:
+  h2:
+    console:
+      enabled: true

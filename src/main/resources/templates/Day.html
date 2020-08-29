@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>movie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/day.css}">
+</head>
+<body>
+<!--<p th:text = "${DayList}"></p>-->
+<table border="1">
+    <tr>
+        <th></th>
+        <th>日付</th>
+        <th>時間</th>
+        <th>空席数</th>
+    </tr>
+    <tr th:each = "dl:${DayList}">
+        <th><div class="B">
+          <a th:href="@{{name}/{day}/{time}
+                  (name=${dl.name},day=${dl.day},time=${dl.time})}">
+                  <button th:if="${dl.Vseat}==0" disabled>満員</button>
+                  <button th:if="${dl.Vseat}!=0">選択</button>
+                </a>
+        </div></th>
+        <th th:text="${dl.day}"/>
+        <th th:text="${dl.time}"/>
+        <th th:text="${dl.Vseat}"/>
+    </tr>
+</table>
+</body>
+</html>

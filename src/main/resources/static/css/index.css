@@ -1,0 +1,26 @@
+div title{
+  float: left;
+  /* display: inline-block; */
+}
+@media(min-width: 800px){
+  h1{
+    font-size:3.2em;
+    margin:0 ;
+  }
+  li{
+  font-size: 2em;
+  font-weight: 700;
+  }
+}
+
+/* grid ~599px */
+@media(max-width: 799px){
+  h1{
+    margin:0 ;
+    font-size: 3.2em;
+  }
+  li{
+  font-size: 2em;
+  font-weight: 700;
+}
+}
