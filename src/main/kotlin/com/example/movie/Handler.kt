@@ -77,6 +77,7 @@ fun makeSeat(
         ):String{
     val d="${manth}/${day}"
         sql.makeMovie(name,d,time)
+        sql.makeSeat(name, d, time)
         return "s"
     }
 
